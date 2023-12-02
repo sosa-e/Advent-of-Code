@@ -11,8 +11,8 @@ sanitizedList = []
 sumOfNumbers = 0
 
 for i in data_into_list:
-    newList = list(map(int, re.findall('\d+', i)))
-    newList = str(newList[0]) + str(newList[-1])
+    newList = list(re.findall('\d', i))
+    newList = str(newList[0] + newList[-1])
     sanitizedList.append(newList)
 
 for n in sanitizedList:
